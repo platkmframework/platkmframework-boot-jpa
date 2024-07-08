@@ -20,6 +20,8 @@ package org.platkmframework.boot.jpa.server.filter;
 
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.platkmframework.jpa.persistence.PersistenceManager;
 
 import jakarta.servlet.Filter;
@@ -28,6 +30,7 @@ import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
  
   
@@ -42,9 +45,10 @@ import jakarta.servlet.http.HttpServletResponse;
 public class DataBaseFilter implements Filter
 {
   
-
+	private static Logger logger = LoggerFactory.getLogger(DataBaseFilter.class);
+	
 	@Override
-	public void destroy() {}
+	public void destroy() { /*  document why this method is empty */ }
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -53,6 +57,8 @@ public class DataBaseFilter implements Filter
 		HttpServletResponse resp = (HttpServletResponse)response; 
 		  
 		try {
+			HttpServletRequest req  = (HttpServletRequest)request;
+			logger.info(req.getPathInfo());
 
 			PersistenceManager.instance().begin();
 			
@@ -71,7 +77,7 @@ public class DataBaseFilter implements Filter
 	
  
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {}
+	public void init(FilterConfig arg0) throws ServletException { /* document why this method is empty */ }
 
 	 
 }
