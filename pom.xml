@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.platkmframework</groupId>
   <artifactId>platkmframework-boot-jpa</artifactId>
- 	<version>1.0.0-beta</version>
+ 	<version>1.0.0</version>
  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
   </properties>
@@ -50,27 +50,27 @@
   	<dependency>
   		<groupId>org.platkmframework</groupId>
   		<artifactId>platkmframework-jpa</artifactId>
-  		<version>1.0.0-beta</version>
+  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>org.platkmframework</groupId>
   		<artifactId>platkmframework-boot</artifactId>
-  		<version>1.0.0-beta</version>
+  		<version>1.0.0</version>
   	</dependency> 
   	<dependency>
   		<groupId>org.platkmframework</groupId>
   		<artifactId>platkmframework-annotation</artifactId>
-  		<version>1.0.0-beta</version>
+  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>org.platkmframework</groupId>
   		<artifactId>platkmframework-content</artifactId>
-  		<version>1.0.0-beta</version>
+  		<version>1.0.0</version>
   	</dependency>
   	<dependency>
   		<groupId>org.platkmframework</groupId>
   		<artifactId>platkmframework-databasereader</artifactId>
-  		<version>1.0.0-beta</version>
+  		<version>1.0.0</version>
   	</dependency>
   </dependencies>
 </project>
